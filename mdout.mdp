@@ -2,7 +2,7 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: novahkiin (1000)
 ;	On host: legion-linux
-;	At date: Sun Apr 20 17:32:01 2025
+;	At date: Sun Apr 20 17:40:07 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2025.1 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /usr/local
 ;	Working dir:  /home/novahkiin/Downloads/Amyloid
 ;	Command line:
-;	  gmx grompp -f ions.mdp -c helix_solv.gro -p topol.top -o ions.tpr
+;	  gmx grompp -f minim.mdp -c helix_solv_ions.gro -p topol.top -o em.tpr
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -99,7 +99,7 @@ rlist                    = 1
 
 ; OPTIONS FOR ELECTROSTATICS AND VDW
 ; Method for doing electrostatics
-coulombtype              = cutoff
+coulombtype              = PME
 coulomb-modifier         = Potential-shift-Verlet
 rcoulomb-switch          = 0
 rcoulomb                 = 1.0
@@ -175,7 +175,7 @@ annealing-temp           =
 ; GENERATE VELOCITIES FOR STARTUP RUN
 gen-vel                  = no
 gen-temp                 = 300
-gen-seed                 = -69240069
+gen-seed                 = -1217773891
 
 ; OPTIONS FOR BONDS    
 constraints              = none
